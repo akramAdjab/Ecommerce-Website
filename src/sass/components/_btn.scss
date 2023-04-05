@@ -1,0 +1,73 @@
+.btns {
+  @extend %flexAligned;
+  gap: var(--ws-xsm);
+}
+
+.btn {
+  padding: var(--ws-sm) var(--ws-md);
+  @extend %border;
+  border-color: var(--color-dark);
+  @extend %transition;
+
+  @extend %flexAlignedCentered;
+  gap: var(--ws-xsm);
+
+  // White version of btn
+  &--white {
+    color: var(--color-dark);
+  }
+
+  &--white:hover,
+  &--dark,
+  &--active,
+  &--small:hover {
+    color: var(--color-white);
+    background-color: var(--color-dark);
+  }
+
+  &--big {
+    width: 100%;
+
+    @extend %flexCentered;
+  }
+
+  // For order
+  &--order {
+    width: 100%;
+  }
+
+  &--small {
+    @include respond(desktop) {
+      padding: var(--ws-xsm) var(--ws-sm);
+    }
+  }
+}
+
+// For video controls
+.btn {
+  &__playPause {
+    color: var(--color-white);
+    width: calc(var(--ws-xsm) * 2 + 1.8rem);
+    padding: var(--ws-xsm);
+    font-size: inherit;
+    @extend %border;
+    border-color: var(--color-white);
+    border-radius: 50%;
+    overflow: hidden;
+
+    // display: flex;
+    gap: var(--ws-xsm);
+
+    &--active {
+      & i:first-child,
+      & i:last-child {
+        @extend %transition;
+        transform: translateX(-23.5px);
+
+        @include respond(tab-land) {
+          transform: translateX(-20.5px);
+        }
+      }
+    }
+  }
+}

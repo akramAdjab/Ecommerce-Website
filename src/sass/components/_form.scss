@@ -1,0 +1,38 @@
+.form {
+  @extend %grid--2-cols;
+  gap: var(--ws-lg);
+
+  &__input-container {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+  }
+
+  &__label {
+    padding: 0 var(--ws-xsm);
+    font-size: 1.4rem;
+    background-color: var(--color-white);
+    @extend %transition;
+
+    transform: translateY(-245%);
+    position: absolute;
+    top: 50%;
+    left: var(--ws-xsm);
+  }
+
+  &__invalid {
+    label {
+      color: var(--color-primary);
+    }
+
+    input,
+    select {
+      border-color: var(--color-primary);
+    }
+  }
+
+  &__address {
+    grid-column: 1 / -1;
+  }
+}

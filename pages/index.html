@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- APP DESCRIPTION -->
+    <meta
+      name="description"
+      content="Nike is best known for its footwear. One of the most valuable brands among sport businesses, Nike employs over 76,000 people worldwide."
+    />
+
+    <!-- SOCIAL SHARE -->
+    <meta property="og:title" content="The Next Galaxy" />
+    <meta property="og:image" content="../src/img/Mockup.jpg" />
+    <meta
+      property="og:description"
+      content="The story will never end. Always stay creative"
+    />
+    <meta property="og:url" content="https://the-next-galaxy.netlify.app/" />
+    <meta property="twitter:title" content="The Next Galaxy" />
+    <!-- <meta name="twitter:creator" content="@commercejs" /> -->
+    <meta property="twitter:image" content="../src/img/Mockup.jpg" />
+    <meta
+      property="twitter:description"
+      content="The story will never end. Always stay creative"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- LINKING FAVICON -->
+    <link rel="icon" href="../src/img/favicon.png" />
+
+    <!-- TEMP: LINKING REMIXICON LIBRARY -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- LINKING CUSTOM SASS STYLES -->
+    <link rel="stylesheet" href="../src/sass/main.scss" />
+
+    <!-- LINKING SCRIPT JS -->
+    <script defer src="../src/js/controller.js" type="module"></script>
+
+    <!-- WEBSITE TITLE -->
+    <title>Ecommerce App</title>
+  </head>
+
+  <body class="homepage">
+    <div class="section__hero hero">
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header-container container">
+          <!-- LOGO -->
+          <h3 class="heading-tertiary">
+            <a class="header__logo" href="./index.html" draggable="false">
+              The Next Galaxy
+            </a>
+          </h3>
+
+          <!-- NAVIGATION -->
+          <nav class="header__nav nav">
+            <a class="nav__link" href="./products.html">Shop</a>
+
+            <button class="cart__btn cart__btn--open">
+              <p class="cart__item">&nbsp;</p>
+              <i class="nav__icon ri-shopping-bag-line"></i>
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      <!-- HERO Video -->
+      <div class="hero__video-box">
+        <img
+          src="../src/img/hero-img.jpg"
+          alt="Nike Shoe 3D mockup"
+          class="hero__media img"
+        />
+        <!-- <video class="hero__media video hidden-display" autoplay muted loop>
+          <source src="../src/img/hero-video.mp4" type="video/mp4" />
+        </video> -->
+      </div>
+
+      <!-- HERO Title -->
+      <div class="hero__title container">
+        <h1 class="heading-primary">Make your move more comfortable</h1>
+        <a href="./products.html" class="btn btn--link">Shop now</a>
+      </div>
+
+      <div class="btn__controls-container container">
+        <button class="btn__playPause btn__playPause--active hidden-display">
+          <i class="play ri-play-line"></i>
+          <i class="pause ri-pause-line"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- TRENDS SECTION -->
+      <section class="section section__trends trends container">
+        <h2 class="heading-secondary textCenter mb-xlg">Trending now</h2>
+
+        <!-- PRODUCTS -->
+        <div class="products mb-xlg"></div>
+
+        <a href="./products.html" class="nav__link textCenter"
+          >See more products &rarr;</a
+        >
+      </section>
+
+      <!-- CATEGORIES SECTION -->
+      <section class="section section__categories container">
+        <h2 class="heading-secondary textCenter mb-xlg">Our categories</h2>
+
+        <div class="categories"></div>
+      </section>
+
+      <!-- ICONIC SECTION -->
+      <section class="section section__iconic">
+        <h2 class="heading-secondary textCenter mb-xlg">Always iconic</h2>
+        <div class="gallery">
+          <!-- Gallery 1 -->
+          <div class="gallery__container gallery__container--1">
+            <img
+              src="../src/img/gallery__img--1.jpg"
+              alt="Nike shoe"
+              class="gallery__img gallery__img--1"
+            />
+            <img
+              src="../src/img/gallery__img--2.jpg"
+              alt="Nike shoe"
+              class="gallery__img gallery__img--2"
+            />
+          </div>
+
+          <!-- Gallery 2 -->
+          <div class="gallery__container gallery__container--2">
+            <img
+              src="../src/img/gallery__img--3.jpg"
+              alt="Nike shoe"
+              class="gallery__img gallery__img--3"
+            />
+          </div>
+
+          <!-- Gallery 3 -->
+          <div class="gallery__container gallery__container--3">
+            <div>
+              <img
+                src="../src/img/gallery__img--4.jpg"
+                alt="Nike shoe"
+                class="gallery__img gallery__img--4"
+              />
+              <img
+                src="../src/img/gallery__img--5.jpg"
+                alt="Nike shoe"
+                class="gallery__img gallery__img--5"
+              />
+            </div>
+
+            <div>
+              <img
+                src="../src/img/gallery__img--6.jpg"
+                alt="Nike shoe"
+                class="gallery__img gallery__img--6"
+              />
+              <img
+                src="../src/img/gallery__img--7.jpg"
+                alt="Nike shoe"
+                class="gallery__img gallery__img--7"
+              />
+            </div>
+          </div>
+
+          <!-- Gallery 4 -->
+          <div class="gallery__container gallery__container--4">
+            <img
+              src="../src/img/gallery__img--8.jpg"
+              alt="Nike shoe"
+              class="gallery__img gallery__img--8"
+            />
+          </div>
+
+          <!-- Gallery 5 -->
+          <div class="gallery__container gallery__container--5">
+            <img
+              src="../src/img/gallery__img--9.jpg"
+              alt="Nike shoe"
+              class="gallery__img gallery__img--9"
+            />
+            <img
+              src="../src/img/gallery__img--10.jpg"
+              alt="Nike shoe"
+              class="gallery__img gallery__img--10"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- NEW SECTION -->
+      <section class="section section__new container">
+        <h2 class="heading-secondary textCenter mb-xlg">New arrivals</h2>
+
+        <!-- PRODUCTS -->
+        <div class="products mb-xlg"></div>
+
+        <a href="./products.html" class="nav__link textCenter"
+          >See more products &rarr;</a
+        >
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__container container mb-xlg">
+        <h3 class="heading-tertiary">
+          <a class="footer__logo" href="./index.html" draggable="false">
+            The Next Galaxy
+          </a>
+        </h3>
+
+        <div class="footer__contact">
+          <h4 class="heading-tertiary mb-sm">Contact</h4>
+          <a href="#" class="nav__link">&mdash; LinkedIn</a>
+        </div>
+
+        <div class="footer__author-box">
+          <p class="footer__author">Developed by <span>Akram Adjab</span></p>
+        </div>
+      </div>
+
+      <p class="footer__copyright container textCenter">
+        Copyright &#169; <span class="footer__copyright-year"></span>. All right
+        reserved
+      </p>
+    </footer>
+  </body>
+</html>

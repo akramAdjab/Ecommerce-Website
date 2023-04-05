@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- APP DESCRIPTION -->
+    <meta
+      name="description"
+      content="Nike is best known for its footwear. One of the most valuable brands among sport businesses, Nike employs over 76,000 people worldwide."
+    />
+
+    <!-- SOCIAL SHARE -->
+    <meta property="og:title" content="The Next Galaxy" />
+    <meta property="og:image" content="../src/img/Mockup.jpg" />
+    <meta
+      property="og:description"
+      content="The story will never end. Always stay creative"
+    />
+    <meta property="og:url" content="https://the-next-galaxy.netlify.app/" />
+    <meta property="twitter:title" content="The Next Galaxy" />
+    <!-- <meta name="twitter:creator" content="@commercejs" /> -->
+    <meta property="twitter:image" content="../src/img/Mockup.jpg" />
+    <meta
+      property="twitter:description"
+      content="The story will never end. Always stay creative"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- LINKING FAVICON -->
+    <link rel="icon" href="../src/img/favicon.png" />
+
+    <!-- TEMP: LINKING REMIXICON LIBRARY -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- LINKING CUSTOM SASS STYLES -->
+    <link rel="stylesheet" href="../src/sass/main.scss" />
+
+    <!-- LINKING SCRIPT JS -->
+    <script defer src="../src/js/controller.js" type="module"></script>
+
+    <!-- WEBSITE TITLE -->
+    <title>Ecommerce App</title>
+  </head>
+
+  <body class="productsPage">
+    <!-- HEADER -->
+    <header class="header header-fixed header-white">
+      <div class="header-container container">
+        <!-- LOGO -->
+        <h3 class="heading-tertiary">
+          <a class="header__logo" href="./index.html" draggable="false">
+            The Next Galaxy
+          </a>
+        </h3>
+
+        <!-- NAVIGATION -->
+        <nav class="header__nav nav">
+          <a class="nav__link" href="./products.html">Shop</a>
+
+          <button class="cart__btn cart__btn--open">
+            <p class="cart__item">&nbsp;</p>
+            <i class="nav__icon ri-shopping-bag-line"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="section section__products container">
+        <h2 class="heading-secondary textCenter mb-xlg">Our Products</h2>
+
+        <!-- Categories btns -->
+        <div class="btns categories__btns mb-lg">
+          <button class="btn btn--small btn--active">All</button>
+        </div>
+
+        <!-- Products -->
+        <div class="products"></div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__container container mb-xlg">
+        <h3 class="heading-tertiary">
+          <a class="footer__logo" href="./index.html" draggable="false">
+            The Next Galaxy
+          </a>
+        </h3>
+
+        <div class="footer__contact">
+          <h4 class="heading-tertiary mb-sm">Contact</h4>
+          <a href="#" class="nav__link">&mdash; LinkedIn</a>
+        </div>
+
+        <div class="footer__author-box">
+          <p class="footer__author">Developed by <span>Akram Adjab</span></p>
+        </div>
+      </div>
+
+      <p class="footer__copyright container textCenter">
+        Copyright &#169; <span class="footer__copyright-year"></span>. All right
+        reserved
+      </p>
+    </footer>
+  </body>
+</html>

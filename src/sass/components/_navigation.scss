@@ -1,0 +1,19 @@
+.nav {
+  &__icon {
+    font-size: var(--font-size-sm);
+  }
+
+  &__link:link,
+  &__link:visited,
+  &__icon {
+    color: var(--color-grey-dark);
+    @extend %transition;
+  }
+
+  &__link:hover,
+  &__link:active,
+  &__icon:hover {
+    color: var(--color-primary);
+    border-bottom: var(--color-dark);
+  }
+}

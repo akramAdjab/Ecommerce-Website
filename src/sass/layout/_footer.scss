@@ -1,0 +1,55 @@
+.footer {
+  color: var(--color-white);
+  padding: var(--ws-xlg) 0;
+  background-color: var(--color-dark);
+
+  &__container {
+    display: flex;
+    gap: var(--ws-xlg);
+
+    // Phone view
+    @include respond(tab-por) {
+      flex-wrap: wrap;
+      gap: var(--ws-md);
+    }
+
+    // Phone view
+    @include respond(phone) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--ws-lg);
+    }
+  }
+
+  &__contact {
+    // Phone view
+    @include respond(phone) {
+      // order: 1;
+      margin-left: auto;
+    }
+  }
+
+  & .nav__link {
+    color: var(--color-white);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__author-box {
+    margin-left: auto;
+
+    @include respond(phone) {
+      margin-left: 0;
+    }
+
+    span {
+      color: var(--color-primary);
+    }
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
+  }
+}

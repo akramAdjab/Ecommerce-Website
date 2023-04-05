@@ -1,0 +1,23 @@
+{
+  "name": "ecommerce-app",
+  "version": "1.0.0",
+  "description": "This is a simple ecommerce app build with commerce.js as a backend",
+  "default": "./pages/index.html",
+  "scripts": {
+    "start": "parcel ./pages/index.html",
+    "build": "parcel build ./pages/index.html --dist-dir ./../dist"
+  },
+  "author": "Akram Adjab",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "^2.8.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@chec/commerce.js": "^2.8.0",
+    "core-js": "^3.29.0",
+    "lottie-web": "^5.10.2",
+    "regenerator-runtime": "^0.13.11"
+  }
+}

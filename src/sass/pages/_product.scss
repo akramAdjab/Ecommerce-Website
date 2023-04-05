@@ -1,0 +1,122 @@
+.productPage {
+  padding-top: 6rem;
+
+  .section__product {
+    // padding: var(--ws-lg) 0;
+    padding-top: var(--ws-lg);
+    padding-bottom: var(--ws-lg);
+  }
+
+  .product-item {
+    display: grid;
+    grid-template-columns: 1fr 40rem;
+    gap: var(--ws-md);
+    cursor: auto;
+
+    // tab-por view
+    @include respond(tab-por) {
+      grid-template-columns: 1fr;
+    }
+
+    // Phone view
+    @include respond(phone) {
+      gap: var(--ws-xsm);
+    }
+
+    &__img-box {
+      height: 100%;
+      overflow: auto;
+
+      @extend %grid--2-cols;
+      column-gap: var(--ws-xsm);
+      row-gap: var(--ws-xsm);
+
+      // Phone view
+      @include respond(phone) {
+        height: 60rem;
+        overflow: hidden;
+        gap: 0;
+
+        position: relative;
+        // display: flex;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+
+      display: block;
+      @extend %transition;
+
+      // Phone view
+      @include respond(phone) {
+        object-fit: cover;
+        object-position: center;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        // flex: 0 0 100%;
+      }
+    }
+
+    &__icons {
+      display: none;
+
+      // Phone view
+      @include respond(phone) {
+        width: 100%;
+        height: 100%;
+        padding: var(--ws-xsm);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &__icon {
+      // Phone view
+      @include respond(phone) {
+        // padding: 1.2rem 1.5rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        background-color: var(--color-white);
+
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        display: grid;
+        place-items: center;
+      }
+
+      &--left {
+        transform: translateX(-1px);
+      }
+
+      &--right {
+        transform: translateX(1px);
+      }
+    }
+
+    // Product details
+    &__title {
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-lg);
+    }
+
+    & .btn {
+      color: var(--color-white);
+      background-color: var(--color-dark);
+
+      @extend %flexAlignedCentered;
+    }
+  }
+}

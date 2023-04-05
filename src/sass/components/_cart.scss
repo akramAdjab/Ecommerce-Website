@@ -1,0 +1,160 @@
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0.5rem);
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 998;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &__hidden {
+    opacity: 0;
+    transform: translateX(105%);
+  }
+}
+
+.cart {
+  width: 50rem;
+  height: 100%;
+  padding: var(--ws-md);
+  background-color: var(--color-white);
+  z-index: 999;
+  @extend %transition;
+
+  @extend %flexColumn;
+  gap: var(--ws-lg);
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  // Phone view
+  @include respond(phone) {
+    width: 80%;
+  }
+
+  &__hidden {
+    opacity: 0;
+    transform: translateX(51rem);
+
+    @include respond(phone) {
+      transform: translateX(100%);
+    }
+  }
+
+  &__title,
+  &__product {
+    @extend %flexAligned;
+  }
+
+  &__title {
+    padding-bottom: var(--ws-md);
+    border-bottom: 1px solid var(--color-grey-light);
+
+    justify-content: space-between;
+  }
+
+  &__btn {
+    display: grid;
+    place-items: center;
+
+    position: relative;
+  }
+
+  &__item {
+    width: 2rem;
+    height: 2rem;
+    color: var(--color-white);
+    font-size: var(--font-size-xxsm);
+    border-radius: 50%;
+    background-color: var(--color-primary);
+
+    display: grid;
+    place-items: center;
+
+    position: absolute;
+    top: -40%;
+    right: -60%;
+  }
+
+  &__icon i {
+    display: block;
+    font-size: var(--font-size-sm);
+  }
+
+  &__product-container {
+    height: 100%;
+    overflow-y: scroll;
+
+    @extend %flexColumn;
+    gap: var(--ws-md);
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &__product {
+    gap: var(--ws-sm);
+  }
+
+  &__img {
+    height: 10rem;
+  }
+
+  &__details {
+    @extend %flexColumn;
+    flex: 1;
+    gap: var(--ws-md);
+
+    div {
+      @extend %flexAligned;
+      justify-content: space-between;
+
+      gap: var(--ws-xsm);
+
+      // Phone view
+      @include respond(phone) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__quantity {
+    display: flex;
+    gap: var(--ws-xsm);
+  }
+
+  &__remove {
+    color: var(--color-primary);
+  }
+
+  &__btns {
+    margin-top: auto;
+    padding-top: var(--ws-lg);
+    border-top: 1px solid var(--color-grey-light);
+
+    flex-wrap: wrap;
+
+    // tab-land view
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    // Phone view
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  .btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}

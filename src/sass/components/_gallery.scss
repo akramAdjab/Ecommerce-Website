@@ -1,0 +1,117 @@
+.gallery {
+  @extend %flexAlignedCentered;
+  gap: var(--ws-xsm);
+
+  // Phone view
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
+  &__container {
+    @extend %flexColumn;
+    gap: var(--ws-xsm);
+
+    // Phone view
+    @include respond(phone) {
+      flex-direction: row;
+    }
+
+    & div {
+      display: flex;
+      gap: var(--ws-xsm);
+    }
+
+    &--1,
+    &--5 {
+      flex-basis: 10%;
+    }
+
+    &--2,
+    &--4 {
+      flex-basis: 20%;
+    }
+
+    &--3 {
+      flex-basis: 40%;
+    }
+
+    // Phone view
+    & > * {
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__img {
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+    // Phone view
+    @include respond(phone) {
+      aspect-ratio: 2;
+    }
+
+    &--1,
+    &--10 {
+      width: 80%;
+
+      // Phone view
+      @include respond(phone) {
+        width: 30%;
+      }
+    }
+
+    &--1 {
+      align-self: flex-end;
+
+      // Phone view
+      @include respond(phone) {
+        align-self: stretch;
+      }
+    }
+
+    &--2,
+    &--9 {
+      width: 100%;
+
+      // Phone view
+      @include respond(phone) {
+        width: calc(70% - 0.8rem);
+      }
+    }
+
+    &--3,
+    &--8 {
+      width: 100%;
+    }
+
+    &--4,
+    &--7 {
+      width: calc(70% - 0.8rem);
+    }
+
+    &--5 {
+      align-self: flex-end;
+    }
+
+    &--5,
+    &--6 {
+      width: 30%;
+      height: 30%;
+
+      // Phone view
+      @include respond(phone) {
+        height: auto;
+
+        align-self: stretch;
+      }
+    }
+
+    // &--10 {
+    //   width: 80%;
+    // }
+  }
+}

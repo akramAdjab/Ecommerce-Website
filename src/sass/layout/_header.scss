@@ -1,0 +1,49 @@
+.header {
+  width: 100%;
+  height: 6rem;
+  margin-top: -6rem;
+  z-index: 100;
+
+  &-container {
+    height: inherit;
+
+    @extend %flexAligned;
+    justify-content: space-between;
+  }
+
+  &-white {
+    box-shadow: 0 10rem 25rem rgba(0, 0, 0, 0.15);
+    background-color: var(--color-white);
+    @extend %transition;
+
+    .header {
+      &__logo {
+        color: var(--color-dark);
+      }
+    }
+
+    .nav {
+      &__link:link,
+      &__link:visited,
+      &__icon {
+        color: var(--color-dark) !important;
+      }
+
+      //     &__link:hover,
+      //     &__link:active,
+      //     &__icon:hover {
+      //       color: var(--color-primary);
+      //     }
+      //   }
+    }
+  }
+
+  &-fixed {
+    position: fixed;
+  }
+
+  &__nav {
+    @extend %flexAligned;
+    gap: var(--ws-md);
+  }
+}

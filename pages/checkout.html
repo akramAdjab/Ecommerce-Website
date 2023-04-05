@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- APP DESCRIPTION -->
+    <meta
+      name="description"
+      content="Nike is best known for its footwear. One of the most valuable brands among sport businesses, Nike employs over 76,000 people worldwide."
+    />
+
+    <!-- SOCIAL SHARE -->
+    <meta property="og:title" content="The Next Galaxy" />
+    <meta property="og:image" content="../src/img/Mockup.jpg" />
+    <meta
+      property="og:description"
+      content="The story will never end. Always stay creative"
+    />
+    <meta property="og:url" content="https://the-next-galaxy.netlify.app/" />
+    <meta property="twitter:title" content="The Next Galaxy" />
+    <!-- <meta name="twitter:creator" content="@commercejs" /> -->
+    <meta property="twitter:image" content="../src/img/Mockup.jpg" />
+    <meta
+      property="twitter:description"
+      content="The story will never end. Always stay creative"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- LINKING FAVICON -->
+    <link rel="icon" href="../src/img/favicon.png" />
+
+    <!-- TEMP: LINKING REMIXICON LIBRARY -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- LINKING CUSTOM SASS STYLES -->
+    <link rel="stylesheet" href="../src/sass/main.scss" />
+
+    <!-- LINKING SCRIPT JS -->
+    <script defer src="../src/js/controller.js" type="module"></script>
+
+    <!-- WEBSITE TITLE -->
+    <title>Ecommerce App</title>
+  </head>
+
+  <body class="checkoutPage">
+    <!-- HEADER -->
+    <header class="header header-fixed header-white">
+      <div class="header-container container">
+        <!-- LOGO -->
+        <h3 class="heading-tertiary">
+          <a class="header__logo" href="./index.html" draggable="false">
+            The Next Galaxy
+          </a>
+        </h3>
+
+        <!-- NAVIGATION -->
+        <nav class="header__nav nav">
+          <a class="nav__link" href="./products.html">Shop</a>
+
+          <button class="cart__btn cart__btn--open">
+            <p class="cart__item">&nbsp;</p>
+            <i class="nav__icon ri-shopping-bag-line"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+      <section class="section checkout container">
+        <div>
+          <h2 class="heading-secondary mb-lg">Delivery details</h2>
+
+          <!-- User form -->
+          <form class="form mb-lg">
+            <!-- First name -->
+            <div class="form__input-container">
+              <label class="form__label" for="first-name">First name*</label>
+              <input type="text" class="form__input" id="first-name" />
+            </div>
+
+            <!-- Last name -->
+            <div class="form__input-container">
+              <label class="form__label" for="last-name">Last name*</label>
+              <input type="text" class="form__input" id="last-name" />
+            </div>
+
+            <!-- Email -->
+            <div class="form__input-container">
+              <label class="form__label" for="email">Email*</label>
+              <input type="email" class="form__input" id="email" />
+            </div>
+
+            <!-- Phone number -->
+            <div class="form__input-container">
+              <label class="form__label" for="phone-number"
+                >Phone number*</label
+              >
+              <input type="text" class="form__input" id="phone-number" />
+            </div>
+
+            <!-- Address -->
+            <div class="form__input-container form__address">
+              <label class="form__label" for="address">Address*</label>
+              <input type="text" class="form__input" id="address" />
+            </div>
+
+            <!-- Country -->
+            <div class="form__input-container">
+              <label class="form__label" for="country">Country*</label>
+              <select
+                id="country"
+                name="countries"
+                class="form__input countries"
+              >
+                <option value="">Please select a country</option>
+              </select>
+            </div>
+
+            <!-- City -->
+            <div class="form__input-container">
+              <label class="form__label" for="city">City*</label>
+              <select id="city" name="cities" class="form__input cities">
+                <option value="">Please select a city</option>
+              </select>
+            </div>
+
+            <!-- Province -->
+            <div class="form__input-container">
+              <label class="form__label" for="province">Province*</label>
+              <input type="text" class="form__input" id="province" />
+            </div>
+
+            <!-- Post code -->
+            <div class="form__input-container">
+              <label class="form__label" for="post-code">Post code*</label>
+              <input type="text" class="form__input" id="post-code" />
+            </div>
+          </form>
+
+          <!-- Order btn -->
+          <button class="btn btn--order btn--dark mb-xsm">Order now</button>
+          <p class="product__error textCenter hidden">
+            Please fill the empty fields.
+          </p>
+        </div>
+
+        <div class="checkout__order">
+          <h2 class="heading-secondary mb-lg">Your order</h2>
+
+          <div class="checkout__product-container mb-lg"></div>
+
+          <!-- <div class="checkout__discount mb-lg">
+            <input
+              type="text"
+              class="checkout__discount--input"
+              placeholder="Enter your discount code"
+            />
+            <button class="btn--dark checkout__discount--btn">Apply</button>
+          </div> -->
+
+          <div class="checkout__cost">
+            <div class="checkout__cost-products">
+              <div class="checkout__cost-details subtotal">
+                <p class="checkout__cost-title">Subtotal</p>
+                <p class="checkout__cost-price subtotal-price"></p>
+              </div>
+              <div class="checkout__cost-details shipping">
+                <p class="checkout__cost-title">Delivery costs</p>
+                <p class="checkout__cost-price shipping-price">
+                  No country selected
+                </p>
+              </div>
+              <!-- <p class="checkout__cost-title">Dicount</p>
+              <p class="checkout__cost-price checkout__cost-discount">
+                No discount code applied
+              </p> -->
+            </div>
+            <div class="checkout__cost-total">
+              <div class="checkout__cost-details total">
+                <h4 class="heading-forty">Total amount</h4>
+                <p class="checkout__cost-price total-price"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__container container mb-xlg">
+        <h3 class="heading-tertiary">
+          <a class="footer__logo" href="./index.html" draggable="false">
+            The Next Galaxy
+          </a>
+        </h3>
+
+        <div class="footer__contact">
+          <h4 class="heading-tertiary mb-sm">Contact</h4>
+          <a href="#" class="nav__link">&mdash; LinkedIn</a>
+        </div>
+
+        <div class="footer__author-box">
+          <p class="footer__author">Developed by <span>Akram Adjab</span></p>
+        </div>
+      </div>
+
+      <p class="footer__copyright container textCenter">
+        Copyright &#169; <span class="footer__copyright-year"></span>. All right
+        reserved
+      </p>
+    </footer>
+
+    <div class="overlay overlay__hidden"></div>
+
+    <div class="loading-box preloader__hidden">
+      <div class="blobs">
+        <div class="blob-center"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+
+      <h3 class="loading-msg heading-tertiary textCenter">
+        Your order is processing...
+      </h3>
+    </div>
+
+    <div class="success success__hidden">
+      <!-- Success message -->
+      <div class="success__message">
+        <!-- <i class="success__icon ri-checkbox-circle-fill"></i> -->
+        <img
+          src="../src/img/confirmation.svg"
+          alt="Illustration of order confirmation"
+          class="success__img"
+        />
+        <div class="success__order-box">
+          <h2 class="success__title">Your order is confirmed</h2>
+          <p class="success__order">
+            Order: <span class="success__order-id"></span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Success order -->
+      <button class="btn btn--dark btn--big success__btn">Go to home</button>
+    </div>
+  </body>
+</html>

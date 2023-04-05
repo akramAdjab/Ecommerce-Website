@@ -1,0 +1,40 @@
+.success {
+  width: 45rem;
+  height: 60rem;
+  padding: var(--ws-lg);
+  background-color: var(--color-white);
+  z-index: 9999;
+  @extend %transition;
+  transform: translate(-50%, -50%);
+
+  @extend %flexColumn;
+  justify-content: space-around;
+  //   gap: var(--ws-hg);
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  &__message {
+    width: 100%;
+
+    @extend %flexAligned;
+    flex-direction: column;
+    gap: var(--ws-lg);
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__order-box {
+    @extend %flexAligned;
+    flex-direction: column;
+    gap: var(--ws-xsm);
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: var(--font-weight-lg);
+  }
+}
