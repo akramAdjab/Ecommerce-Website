@@ -1,7 +1,7 @@
 {
   "name": "ecommerce-app",
   "version": "1.0.0",
-  "description": "This is a simple ecommerce app build with commerce.js as a backend",
+  "description": "e-commerce app",
   "default": "./pages/index.html",
   "scripts": {
     "start": "parcel ./pages/index.html",
