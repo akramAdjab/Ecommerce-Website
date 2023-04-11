@@ -308,7 +308,5 @@ const init = function () {
 
   checkoutView.captureOrder(controlCaptureOrder);
   checkoutView.handleBackToHome(controlBackToHome);
-
-  // controlAnimation();
 };
 init();
