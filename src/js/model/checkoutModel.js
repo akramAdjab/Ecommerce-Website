@@ -111,6 +111,7 @@ class Checkout {
           },
         },
       };
+      console.log(newOrder);
 
       const res = await commerce.checkout.capture(this.checkoutId, newOrder);
 
